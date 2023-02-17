@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Горбань Александр" />
+    <meta name="description" content="Место" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Блог</title>
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <img src="./images/logo.svg" alt="логотип Сайта" class="header__img" />
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <img
+          src="./images/zhak-iv-kusto.jpg"
+          alt="аватар"
+          class="profile__avatar"
+        />
+        <div class="profile__info">
+          <div class="profile__block">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__redact active" type="button"></button>
+          </div>
+          <p class="profile__about-me">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button active" type="button">
+          <img
+            src="./images/plus.png"
+            alt="крестик кнопка"
+            class="profile__btn-img"
+          />
+        </button>
+      </section>
+
+      <section class="elements">
+        <template id="element">
+          <div class="element">
+            <img src="#" class="element__img" />
+            <button class="element__btn-delete-card"></button>
+            <div class="element__block">
+              <h2 class="element__title"></h2>
+              <button class="element__btn-like" type="button"></button>
+            </div>
+          </div>
+        </template>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__title">© 2020 Mesto Russia</p>
+    </footer>
+
+    <section class="popup popup_type_profile">
+      <div class="popup__container">
+        <button class="popup__close-btn active" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form-profile" name="profile-info">
+          <input
+            class="popup__input popup__input_person_name"
+            name="name"
+            type="text"
+            placeholder="Имя"
+            required
+          />
+
+          <input
+            class="popup__input popup__input_person_about-me"
+            name="about-me"
+            type="text"
+            placeholder="О себе"
+            required
+          />
+
+          <button class="popup__save-btn" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_type_card">
+      <div class="popup__container">
+        <button
+          class="popup__close-btn popup__btn-card-close active"
+          type="button"
+        ></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form-card" name="card">
+          <input
+            class="popup__input popup__input_card_name"
+            name="name"
+            type="text"
+            placeholder="Название"
+            required
+          />
+
+          <input
+            class="popup__input popup__input_card_src"
+            name="about-me"
+            type="url"
+            placeholder="Ссылка на картинку"
+            required
+          />
+
+          <button class="popup__save-btn" type="submit">Создать</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_type_image overlay">
+      <figure class="popup__figure-image">
+        <button
+          class="popup__close-btn popup__btn-image-close"
+          type="button"
+        ></button>
+        <img class="popup__image" src="#" />
+        <figcaption class="popup__title popup__title-image"></figcaption>
+      </figure>
+    </section>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
