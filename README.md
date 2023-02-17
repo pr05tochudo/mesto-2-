@@ -5,6 +5,6 @@
 
 Стек HTML CSS JavaScript Сайт
 
-[Ссылка на сайт] https://pr05tochudo.github.io/mesto/
+[Ссылка на сайт] https://pr05tochudo.github.io/mesto-2-/
 
 
