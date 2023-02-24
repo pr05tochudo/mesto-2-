@@ -88,6 +88,13 @@ popupCloseBtn.forEach((button) => {
   });
 });
 
+function closePopupByEscape(evt) {
+  if (evt.key === 'Escape') {
+      openedPopup = document.querySelector('.popup_opened');
+      closePopup(openedPopup)
+  };
+};
+
 popupCardOpen.addEventListener("click", () => {
   openPopup(popupCardContain);
   const buttonElement = Array.from(
