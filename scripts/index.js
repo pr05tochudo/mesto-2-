@@ -89,21 +89,15 @@ popupCloseBtn.forEach((button) => {
 });
 
 function closePopupByEscape(evt) {
-  if (evt.key === 'Escape') {
-      openedPopup = document.querySelector('.popup_opened');
-      closePopup(openedPopup)
-  };
-};
+  if (evt.key === "Escape") {
+    openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
+  }
+}
 
 popupCardOpen.addEventListener("click", () => {
   openPopup(popupCardContain);
-  const buttonElement = Array.from(
-    document.querySelectorAll(".popup__form-save-btn")
-  );
-  buttonElement.forEach((item) => {
-    item.setAttribute("disabled", "");
-    item.classList.add("popup__form-save-btn_inactive");
-  });
+  disableSubmitButton();
 });
 
 popupProfileOpenBtn.addEventListener("click", () => {
@@ -142,13 +136,7 @@ function handlerFormSubmitCard(evt) {
 
   closePopup(popupCardContain);
   evt.target.reset();
-  const buttonElement = Array.from(
-    document.querySelectorAll(".popup__form-save-btn")
-  );
-  buttonElement.forEach((item) => {
-    item.setAttribute("disabled", "");
-    item.classList.add("popup__form-save-btn_inactive");
-  });
+  disableSubmitButton();
 }
 
 formElementProfile.addEventListener("submit", handleFormSubmitProfile);

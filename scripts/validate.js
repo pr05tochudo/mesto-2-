@@ -1,15 +1,26 @@
-const showInputError = (formElement, inputElement, inputErrorClass, errorClass, errorMessage) => {
+const showInputError = (
+  formElement,
+  inputElement,
+  inputErrorClass,
+  errorClass,
+  errorMessage
+) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(inputErrorClass);
   errorElement.textContent = errorMessage;
   errorElement.classList.add(errorClass);
 };
 
-const hideInputError = (formElement, inputElement, inputErrorClass, errorClass) => {
+const hideInputError = (
+  formElement,
+  inputElement,
+  inputErrorClass,
+  errorClass
+) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(inputErrorClass);
   errorElement.classList.remove(errorClass);
-  errorElement.textContent = '';
+  errorElement.textContent = "";
 };
 
 const checkInputValidity = (
@@ -96,3 +107,15 @@ enableValidation({
   inputErrorClass: "popup__form-input_type_error",
   errorClass: "popup__form-input-error_active",
 });
+
+function disableSubmitButton() {
+  const buttonElement = document.querySelector(".popup__form-save-btn");
+  buttonElement.setAttribute("disabled", "");
+  buttonElement.classList.add("popup__form-save-btn_inactive");
+}
+
+function disableSubmitButton() {
+  const buttonElement = document.querySelector(".popup__form-save-btn");
+  buttonElement.setAttribute("disabled", "");
+  buttonElement.classList.add("popup__form-save-btn_inactive");
+}
