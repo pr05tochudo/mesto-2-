@@ -8,6 +8,8 @@ const formElementProfile = document.querySelector(".popup__form-profile");
 const nameInput = formElementProfile.querySelector(
   ".popup__form-input_person_name"
 );
+const buttonCreate = document.querySelector(".popup__form-save-btn-create");
+const buttonElement = document.querySelector(".popup__form-save-btn");
 const jobInput = formElementProfile.querySelector(
   ".popup__form-input_person_about-me"
 );
@@ -30,6 +32,7 @@ const elemenTextPopup = document.querySelector(".popup__title-image");
 
 const popupInput = document.querySelectorAll(".popup__form-input");
 const popupCloseBtn = document.querySelectorAll(".popup__close-btn");
+
 
 const elementTemplate = document
   .querySelector("#element")
@@ -75,6 +78,7 @@ function createCard(item) {
 function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", closePopupByEscape);
+  handlerFormSumbitNewCard()
 }
 
 function closePopup(popup) {
@@ -97,7 +101,7 @@ function closePopupByEscape(evt) {
 
 popupCardOpen.addEventListener("click", () => {
   openPopup(popupCardContain);
-  disableSubmitButton();
+  disableSubmitButton(buttonElement);
 });
 
 popupProfileOpenBtn.addEventListener("click", () => {
@@ -136,8 +140,17 @@ function handlerFormSubmitCard(evt) {
 
   closePopup(popupCardContain);
   evt.target.reset();
-  disableSubmitButton();
+  disableSubmitButton(buttonElement);
 }
-
+function handlerFormSumbitNewCard() {
+  if (cardNameInput.value.length === 0 || cardLinkInput.value.length === 0) {
+    buttonCreate.disabled = true;
+    buttonCreate.classList.add("popup__form-save-btn_inactive")
+  }
+}
+  
 formElementProfile.addEventListener("submit", handleFormSubmitProfile);
 formElementCard.addEventListener("submit", handlerFormSubmitCard);
+
+
+

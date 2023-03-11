@@ -108,14 +108,10 @@ enableValidation({
   errorClass: "popup__form-input-error_active",
 });
 
-function disableSubmitButton() {
-  const buttonElement = document.querySelector(".popup__form-save-btn");
+function disableSubmitButton(buttonElement) {
   buttonElement.setAttribute("disabled", "");
   buttonElement.classList.add("popup__form-save-btn_inactive");
 }
+ 
 
-function disableSubmitButton() {
-  const buttonElement = document.querySelector(".popup__form-save-btn");
-  buttonElement.setAttribute("disabled", "");
-  buttonElement.classList.add("popup__form-save-btn_inactive");
-}
+
