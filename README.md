@@ -1,4 +1,4 @@
-# Проект: Место
+# Проект: Место 8 Практическая работа
 
 **Интро**
 
@@ -10,10 +10,8 @@
 **Сайт**
 
 <<<<<<< HEAD
-- [Ссылка на сайт](https://max-teplyakov.github.io/mesto/)
+- [Ссылка на сайт] https://pr05tochudo.github.io/mesto-2-/
 =======
-* [Ссылка на сайт] https://pr05tochudo.github.io/mesto-2 -/
->>>>>>> fc95e1558b427e0dee1b250a61fc0e82d8a970d8
 
 
-- [Ссылка на макет в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=50160%3A347&t=wdbV8pzRzeHiT39M-0)
+
